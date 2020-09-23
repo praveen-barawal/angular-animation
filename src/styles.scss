@@ -108,8 +108,8 @@ body {
   margin-left: 38%;
   position: absolute;
   top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  //-ms-transform: translateY(-50%);
+  //transform: translateY(-50%);
 }
 
 .progress-text {
