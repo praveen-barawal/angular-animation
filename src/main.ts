@@ -10,6 +10,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {DemoMaterialModule} from './app/material-module';
 
 import {ButtonOverviewExample} from './app/button-overview-example';
+import { ToggleDemoComponent } from './app/toggle-demo/toggle-demo-component';
+import { ToggleComponent } from './app/toggle/toggle.component';
+import { SwitchComponent } from './app/toggle-implementation/switch.component';
 
 @NgModule({
   imports: [
@@ -21,9 +24,9 @@ import {ButtonOverviewExample} from './app/button-overview-example';
     MatNativeDateModule,
     ReactiveFormsModule,
   ],
-  entryComponents: [ButtonOverviewExample],
-  declarations: [ButtonOverviewExample],
-  bootstrap: [ButtonOverviewExample],
+  entryComponents: [ToggleDemoComponent],
+  declarations: [ToggleComponent,SwitchComponent, ToggleDemoComponent],
+  bootstrap: [ToggleDemoComponent],
   providers: []
 })
 export class AppModule {}
