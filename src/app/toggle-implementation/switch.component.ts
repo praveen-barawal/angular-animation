@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
-import { MatSidenav } from '@angular/material';
+import { SlideInOutAnimation } from '../Animation/animation';
 
 @Component({
   selector: 'switch',
   templateUrl: './switch.component.html',
+   animations: [SlideInOutAnimation]
 })
 export class SwitchComponent  {
   @Input() isChecked: boolean;
@@ -15,6 +16,7 @@ export class SwitchComponent  {
   canShowPrimary:boolean = false;
   colorClass:string = 'warn';
   spinnerClass :string = "mat-off-progress";
+  animationState:string = 'in';
 
   showTextAndLoader(showText: string){
     setTimeout(()=>{        
@@ -31,6 +33,7 @@ export class SwitchComponent  {
        this.colorClass = 'primary';
        this.spinnerClass = "mat-on-progress";
        this.showTextAndLoader('Devices On');
+          this.animationState = this.animationState === 'out' ? 'in' : 'out';
      }
      else{
        this.colorClass = 'warn';
