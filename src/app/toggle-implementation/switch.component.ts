@@ -9,11 +9,12 @@ export class SwitchComponent  {
   @Input() isChecked: boolean;
   @Input() className: string;
 
-  private showProgress = false;
-  private showText = 'Devices Off';
-  canShowWarn = true;
-  canShowPrimary = false;
-  colorClass = 'warn';
+  showProgress:boolean = false;
+  showText:string = 'Devices Off';
+  canShowWarn:boolean = true;
+  canShowPrimary:boolean = false;
+  colorClass:string = 'warn';
+  spinnerClass :string = "mat-off-progress";
 
   showTextAndLoader(showText: string){
     setTimeout(()=>{        
@@ -28,10 +29,12 @@ export class SwitchComponent  {
      this.showText = 'Please Wait...';
      if(this.isChecked){
        this.colorClass = 'primary';
+       this.spinnerClass = "mat-on-progress";
        this.showTextAndLoader('Devices On');
      }
      else{
        this.colorClass = 'warn';
+       this.spinnerClass = "mat-off-progress";
        this.showTextAndLoader('Devices Off');
      }
   }
