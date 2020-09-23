@@ -30,12 +30,14 @@ export class SwitchComponent  {
       this.colorClass ="progress";
      this.showText = 'Please Wait...';
      if(this.isChecked){
+       this.animationState = 'out';
        this.colorClass = 'primary';
        this.spinnerClass = "mat-on-progress";
        this.showTextAndLoader('Devices On');
-          this.animationState = this.animationState === 'out' ? 'in' : 'out';
+          
      }
      else{
+      this.animationState = 'in';
        this.colorClass = 'warn';
        this.spinnerClass = "mat-off-progress";
        this.showTextAndLoader('Devices Off');
