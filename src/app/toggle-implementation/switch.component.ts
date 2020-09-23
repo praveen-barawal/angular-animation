@@ -23,7 +23,6 @@ export class SwitchComponent  {
     }, 1000);
   }
 
-//Function to set Loader, change text and color change on toggle button click.
   onClick(){
      this.showProgress = true;
      this.showText = 'Please Wait...';
