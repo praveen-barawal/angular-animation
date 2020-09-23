@@ -24,8 +24,8 @@ export class SwitchComponent  {
 
   onClick(){
      this.showProgress = true;
+      this.colorClass ="progress";
      this.showText = 'Please Wait...';
-
      if(this.isChecked){
        this.colorClass = 'primary';
        this.showTextAndLoader('Devices On');
