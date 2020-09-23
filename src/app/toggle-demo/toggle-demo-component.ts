@@ -1,11 +1,18 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
+import { environment } from "../../environments/environment";
+
 
 @Component({
-  selector: 'toggle-demo',
-  templateUrl: './toggle-demo-component.html'
+  selector: "toggle-demo",
+  templateUrl: "./toggle-demo-component.html"
 })
-export class ToggleDemoComponent  {
-  showMessage(value:string) {
+export class ToggleDemoComponent {
+  toggleDefaultSetting: boolean = true;
+  constructor() {
+    this.toggleDefaultSetting = environment.isToggleOff;
+  }
+
+  showMessage(value: string) {
     console.log(value);
   }
 }
