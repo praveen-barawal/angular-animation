@@ -103,6 +103,13 @@ body {
     left: 1px !important;
 }
 
+.mat-on-spinner{
+	position: absolute !important;
+    top: -21px;
+    left: 1px;
+    z-index: 999;
+}
+
 .container {
   height: 200px;
   position: relative;
