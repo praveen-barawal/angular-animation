@@ -6,6 +6,7 @@ $backColorRed:rgb(255, 222, 222);
 $backColorGreen:rgb(222, 252, 235);
 $backProgress:rgb(216, 221, 255);
 
+
 body {
   font-family: Roboto, Arial, sans-serif;
   margin: 0;
@@ -15,14 +16,14 @@ body {
   float: right;
 }
 .mat-slide-toggle-bar{
-  width: 90px !important;
-  height: 55px !important;
-  border-radius: 28px !important;
+  width: 100px !important;
+    height: 60px !important;
+    border-radius: 30px !important;
 }
 
 .mat-slide-toggle-thumb {
-    height: 45px !important;
-    width: 45px !important;
+    height: 49px !important;
+    width: 49px !important;
     border-radius: 50% !important;
 }
 
@@ -35,7 +36,7 @@ body {
 
 .mat-slide-toggle.mat-checked {
   .mat-slide-toggle-thumb-container{
-  left:25px !important;
+  left:30px !important;
 }
 }
 .mat-slide-toggle .mat-slide-toggle-ripple{
@@ -77,7 +78,8 @@ body {
   background-color:$backProgress !important;
 }
 .vertical-center{
-  margin-left:30% !important;
+  margin-left:0 !important;
+  left:40%;
 }
 .mat-spinner,
 .mat-progress-spinner svg{
@@ -87,7 +89,7 @@ body {
 .mat-progress-spinner {
     position: absolute !important;
     top: -15px;
-    left:32px;
+    left:42px;
     z-index: 999;
 }
 .mat-progress-spinner circle, .mat-spinner circle {
@@ -96,7 +98,6 @@ body {
 .mat-progress-spinner circle{
   fill:white !important;
 }
-
 .container {
   height: 200px;
   position: relative;
