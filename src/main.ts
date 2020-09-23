@@ -24,9 +24,9 @@ import { SwitchComponent } from './app/toggle-implementation/switch.component';
     MatNativeDateModule,
     ReactiveFormsModule,
   ],
-  entryComponents: [ButtonOverviewExample],
-  declarations: [ ButtonOverviewExample, ToggleComponent,SwitchComponent, ToggleDemoComponent],
-  bootstrap: [ButtonOverviewExample],
+  entryComponents: [ToggleDemoComponent],
+  declarations: [ ToggleComponent,SwitchComponent, ToggleDemoComponent],
+  bootstrap: [ToggleDemoComponent],
   providers: []
 })
 export class AppModule {}

@@ -9,7 +9,7 @@ export class SwitchComponent  {
   @Input() on: boolean;
   @Input() className: string;
 
-   private showProgress = false;
+ private showProgress = false;
   private showText = 'Devices Off';
   isChecked = false;
   canShowWarn = true;
@@ -37,5 +37,4 @@ export class SwitchComponent  {
        this.showTextAndLoader('Devices Off');
      }
   }
- 
 }
