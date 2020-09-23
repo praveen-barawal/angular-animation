@@ -6,7 +6,7 @@
   <mat-slide-toggle *ngIf="!showProgress" (change)="onClick()" 
    color="primary" [(ngModel)]="isChecked"> 
   </mat-slide-toggle>
-	<mat-spinner *ngIf="showProgress" color="primary"></mat-spinner>
+	<mat-spinner  [class.progress]="showProgress" *ngIf="showProgress" color="primary"></mat-spinner>
   <span class="progress-text">{{showText}}</span>
 </div>
 </div>
