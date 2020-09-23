@@ -9,7 +9,6 @@ export class ToggleComponent  {
   @Output() toggled: EventEmitter<boolean> = new EventEmitter();
 
   onClick() {
-    debugger;
     this.isChecked = !this.isChecked;
     this.toggled.emit(this.isChecked);
   }
