@@ -3,10 +3,10 @@
 
 <div class="basic-container">
   <div class="vertical-center">
-  <mat-slide-toggle (change)="onClick()" 
+  <mat-slide-toggle *ngIf="!showProgress" (change)="onClick()" 
    color="primary" [(ngModel)]="isChecked"> 
   </mat-slide-toggle>
-	<mat-spinner  color="primary"></mat-spinner>
+	<mat-spinner *ngIf="!showProgress" color="primary"></mat-spinner>
   <span class="progress-text">{{showText}}</span>
 </div>
 </div>
