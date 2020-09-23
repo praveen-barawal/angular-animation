@@ -7,7 +7,7 @@ import { environment } from "../../environments/environment";
   templateUrl: "./toggle-demo-component.html"
 })
 export class ToggleDemoComponent {
-  toggleDefaultSetting: boolean = true;
+  toggleDefaultSetting: boolean;
   constructor() {
     this.toggleDefaultSetting = environment.isToggleOff;
   }
