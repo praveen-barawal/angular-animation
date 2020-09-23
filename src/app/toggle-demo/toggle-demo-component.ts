@@ -9,7 +9,7 @@ import { environment } from "../../environments/environment";
 export class ToggleDemoComponent {
   toggleDefaultSetting: boolean;
   constructor() {
-    this.toggleDefaultSetting = environment.isToggleOff;
+    this.toggleDefaultSetting = environment.isToggleOn;
   }
 
   showMessage(value: string) {
