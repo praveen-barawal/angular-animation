@@ -6,12 +6,11 @@ import { MatSidenav } from '@angular/material';
   templateUrl: './switch.component.html',
 })
 export class SwitchComponent  {
-  @Input() on: boolean;
+  @Input() isChecked: boolean;
   @Input() className: string;
 
- private showProgress = false;
+  private showProgress = false;
   private showText = 'Devices Off';
-  isChecked = false;
   canShowWarn = true;
   canShowPrimary = false;
   colorClass = 'warn';

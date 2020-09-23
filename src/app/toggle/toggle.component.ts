@@ -5,11 +5,12 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   templateUrl: './toggle.component.html',
 })
 export class ToggleComponent  {
-  @Input() on: boolean;
+  @Input() isChecked: boolean;
   @Output() toggled: EventEmitter<boolean> = new EventEmitter();
 
   onClick() {
-    this.on = !this.on;
-    this.toggled.emit(this.on);
+    debugger;
+    this.isChecked = !this.isChecked;
+    this.toggled.emit(this.isChecked);
   }
 }
