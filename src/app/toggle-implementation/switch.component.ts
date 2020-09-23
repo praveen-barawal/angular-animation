@@ -20,7 +20,7 @@ export class SwitchComponent  {
     setTimeout(()=>{        
        this.showText = showText;
        this.showProgress = false;
-    }, 90000);
+    }, 2000);
   }
 
   onClick(){
