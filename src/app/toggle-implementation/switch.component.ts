@@ -28,7 +28,7 @@ export class SwitchComponent {
       this.showText = showText;
       this.showProgress = false;
       this.isShowLoader = false;
-    }, 2000);
+    }, 1500);
   }
 
   onClick() {

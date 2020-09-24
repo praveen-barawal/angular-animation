@@ -15,13 +15,25 @@ import {
 export const AngularAnimation = [
   trigger("slideInOutUp", [
     transition(":leave", [
-      style({ zIndex: "1" }),
-      animate("400ms ease-in", style({ transform: "translateY(-50%)" })),
+      style({ zIndex: "0" }),
+      animate("400ms ease-out", 
+      style(
+        { 
+          transform: "translateY(-100%)"
+           })),
       transition(":enter", [
-        style({ transform: "translateY(-20%)", zIndex: "1" }),
+        style({
+           transform: "translateY(-50%)",
+            //zIndex: "1",
+            opacity: 0
+             }),
         animate(
           "400ms ease-in",
-          style({ transform: "translateY(-100%)", zIndex: "1" })
+          style({
+             transform: "translateY(-100%)", 
+            // zIndex: "1",
+             opacity: 0
+              })
         )
       ])
     ])
@@ -30,15 +42,33 @@ export const AngularAnimation = [
   trigger("slideInOutDown", [
     transition(":leave", [
       style({ zIndex: "1" }),
-      animate("400ms ease-in", style({ transform: "translateY(50%)" })),
+      animate("400ms ease-out", style({ transform: "translateY(100%)" })),
       transition(":enter", [
-        style({ transform: "translateY(20%)", zIndex: "1" }),
+        style({
+           transform: "translateY(-20%)",
+            zIndex: "1",
+            opacity: 0 
+            }),
         animate(
-          "400ms ease-in",
-          style({ transform: "translateY(100%)", zIndex: "1" })
+          "600ms ease-in-out",
+          style({
+             transform: "translateY(-200%)", 
+             zIndex: "1",
+             opacity: 0 
+             })
         )
       ])
     ])
   ]),
+
+   trigger("slide", [
+    transition(':enter', [
+      style({ opacity: 0 }),
+      animate(`1s ease-in-out`)
+    ]),
+    transition(':leave', [
+      animate(`1ms ease-in-out`,
+       style({ opacity: 0 }))])
+  ])
   
 ];

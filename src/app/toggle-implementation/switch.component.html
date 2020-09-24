@@ -6,8 +6,8 @@
 			</mat-slide-toggle>
 			<mat-spinner [ngClass]="spinnerClass" *ngIf="showProgress" color="primary">
 			</mat-spinner>
-			<span [@slideInOutUp]="isShowAnimation"  *ngIf="!isShowLoader" class="progress-text">{{showText}}</span>
-			<span [@slideInOutUp]="isShowAnimation"  *ngIf="isShowLoader" class="progress-text">Please Wait...</span>
+			<span [@slideInOutUp]  *ngIf="!isShowLoader" class="progress-text">{{showText}}</span>
+			<span [@slideInOutUp]  *ngIf="isShowLoader" class="progress-text">Please Wait...</span>
 		</div>
 
 	</div>
