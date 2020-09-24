@@ -1,9 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { trigger, transition, animate, style } from '@angular/animations'
+import { AngularAnimation } from '../Animation/animation';
 
 @Component({
   selector: 'switch',
   templateUrl: './switch.component.html',
+   animations: [AngularAnimation],
     
 })
 export class SwitchComponent  {
@@ -16,6 +18,7 @@ export class SwitchComponent  {
   canShowPrimary:boolean = false;
   colorClass:string = 'warn';
   spinnerClass :string = "mat-off-progress";
+  animationState:string = 'in';
   isShowLoader:boolean = false;
 
   showTextAndLoader(showText: string){

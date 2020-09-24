@@ -57,12 +57,13 @@ body {
 }
 }
 .progress-text{
-    position: absolute;
+  position: absolute;
     width: 178px;
     top: -13px;
-    left:120px;
-    font-weight: 700;
-    font-size: 26px;
+    left: 120px;
+    font-weight: 500;
+    font-size: 32px;
+    font-family: arial;
     color:rgb(89, 70, 68) !important;
 }
 .progress-wait-text{
