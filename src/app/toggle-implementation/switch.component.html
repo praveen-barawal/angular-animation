@@ -7,8 +7,10 @@
    color="primary" [(ngModel)]="isChecked" > 
   </mat-slide-toggle>
 	<mat-spinner [ngClass]="spinnerClass"  *ngIf="showProgress" color="primary"></mat-spinner>
-  <span [@slideInOut]="animationState" class="progress-text">{{showText}}</span>
+  <span *ngIf="!isShowLoader" class="progress-text">{{showText}}</span>
+  <span *ngIf="isShowLoader" class="progress-text">Please Wait...</span>
 </div>
+
 </div>
 </mat-sidenav-container>
 
