@@ -18,8 +18,7 @@ export const AngularAnimation = [
       style({ zIndex: "0" }),
       animate("400ms ease-out", 
       style(
-        { 
-          transform: "translateY(-100%)"
+        { transform: "translateY(-80%)"
            })),
       transition(":enter", [
         style({
