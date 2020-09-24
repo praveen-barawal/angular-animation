@@ -13,7 +13,7 @@ export const AngularAnimation = [
         transform: "translateY(-50%)",
         opacity: 0
       }),
-      animate(
+      animate( 
         "400ms ease-in",
         style({
           transform: "translateY(-100%)",
