@@ -4,10 +4,6 @@ import {
   style,
   transition,
   animate,
-  group,
-  query,
-  stagger,
-  keyframes
 } from "@angular/animations";
 
 export const AngularAnimation = [

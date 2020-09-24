@@ -5,9 +5,7 @@ import { AngularAnimation } from "../Animation/animation";
 @Component({
   selector: "switch",
   templateUrl: "./switch.component.html",
-  animations: [
-    AngularAnimation,
-  ]
+  animations: [AngularAnimation]
 })
 export class SwitchComponent {
   @Input() isChecked: boolean;
@@ -30,8 +28,6 @@ export class SwitchComponent {
   }
 
   onClick() {
-    debugger
-    console.log("checked"+this.isChecked)
     this.showProgress = true;
     this.colorClass = "progress";
     this.isShowLoader = true;
