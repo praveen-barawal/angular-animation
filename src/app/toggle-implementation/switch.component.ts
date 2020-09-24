@@ -32,6 +32,7 @@ export class SwitchComponent {
   }
 
   onClick() {
+    debugger
     console.log("checked"+this.isChecked)
     this.showProgress = true;
     this.colorClass = "progress";
