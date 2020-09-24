@@ -1,22 +1,12 @@
 import { Component, Input } from "@angular/core";
 import { trigger, transition, animate, style } from "@angular/animations";
 import { AngularAnimation } from "../Animation/animation";
-import {
-  slideInLeftAnimation,
-  slideInRightAnimation,
-  slideOutLeftAnimation,
-  slideOutRightAnimation
-} from "angular-animations";
 
 @Component({
   selector: "switch",
   templateUrl: "./switch.component.html",
   animations: [
     AngularAnimation,
-    slideInLeftAnimation(),
-    slideInRightAnimation(),
-    slideOutLeftAnimation(),
-    slideOutRightAnimation()
   ]
 })
 export class SwitchComponent {
@@ -31,6 +21,7 @@ export class SwitchComponent {
   spinnerClass: string = "mat-off-progress";
   animationState: string = "in";
   isShowLoader: boolean = false;
+  isShowAnimation:false;
 
   showTextAndLoader(showText: string) {
     setTimeout(() => {
@@ -41,6 +32,7 @@ export class SwitchComponent {
   }
 
   onClick() {
+    console.log("checked"+this.isChecked)
     this.showProgress = true;
     this.colorClass = "progress";
     this.isShowLoader = true;

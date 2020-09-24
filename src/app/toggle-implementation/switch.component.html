@@ -4,10 +4,10 @@
 		<div class="vertical-center">
 			<mat-slide-toggle *ngIf="!showProgress" (change)="onClick()" color="primary" [(ngModel)]="isChecked">
 			</mat-slide-toggle>
-			<mat-spinner    [ngClass]="spinnerClass" *ngIf="showProgress" color="primary">
+			<mat-spinner [ngClass]="spinnerClass" *ngIf="showProgress" color="primary">
 			</mat-spinner>
-			<span [@slideInOutUp]="isChecked" [@slideInOutDown]="!isChecked" *ngIf="!isShowLoader" class="progress-text">{{showText}}</span>
-			<span [@slideInOutUp]="isChecked" [@slideInOutDown]="!isChecked" *ngIf="isShowLoader" class="progress-text">Please Wait...</span>
+			<span [@slideInOutUp]="isShowAnimation"  *ngIf="!isShowLoader" class="progress-text">{{showText}}</span>
+			<span [@slideInOutUp]="isShowAnimation"  *ngIf="isShowLoader" class="progress-text">Please Wait...</span>
 		</div>
 
 	</div>
