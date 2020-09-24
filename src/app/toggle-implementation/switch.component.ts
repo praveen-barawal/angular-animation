@@ -19,9 +19,7 @@ export class SwitchComponent {
   canShowPrimary: boolean = false;
   colorClass: string = "warn";
   spinnerClass: string = "mat-off-progress";
-  animationState: string = "in";
   isShowLoader: boolean = false;
-  isShowAnimation:false;
 
   showTextAndLoader(showText: string) {
     setTimeout(() => {
@@ -39,12 +37,10 @@ export class SwitchComponent {
     this.isShowLoader = true;
     this.showText = "Please Wait...";
     if (this.isChecked) {
-      this.animationState = "out";
       this.colorClass = "primary";
       this.spinnerClass = "mat-on-progress";
       this.showTextAndLoader("Devices On");
     } else {
-      this.animationState = "in";
       this.colorClass = "warn";
       this.spinnerClass = "mat-off-progress";
       this.showTextAndLoader("Devices Off");
