@@ -1,6 +1,7 @@
 import { Component, Input } from "@angular/core";
 import { trigger, transition, animate, style } from "@angular/animations";
 import { AngularAnimation } from "../Animation/animation";
+import { environment } from "../../environments/environment";
 
 @Component({
   selector: "switch",
@@ -19,6 +20,12 @@ export class SwitchComponent {
   spinnerClass: string = "mat-off-progress";
   isShowLoader: boolean = false;
 
+  constructor() {
+    this.isChecked=  environment.isToggleOn;
+    console.log(this.isChecked);
+    this.setSwitchData();
+  }
+
   showTextAndLoader(showText: string) {
     setTimeout(() => {
       this.showText = showText;
@@ -28,7 +35,12 @@ export class SwitchComponent {
   }
 
   onClick() {
-    this.showProgress = true;
+   this.setSwitchData();
+  }
+
+  setSwitchData()
+  {
+     this.showProgress = true;
     this.colorClass = "progress";
     this.isShowLoader = true;
     this.showText = "Please Wait...";
