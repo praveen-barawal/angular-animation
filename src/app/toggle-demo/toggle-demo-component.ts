@@ -11,8 +11,4 @@ export class ToggleDemoComponent {
   constructor() {
     this.toggleDefaultSetting = environment.isToggleOn;
   }
-
-  showMessage(value: string) {
-    console.log(value);
-  }
 }
