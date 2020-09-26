@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from "@angular/core";
 import { trigger, transition, animate, style } from "@angular/animations";
-import { AngularAnimation } from "../Animation/animation";
+import { AngularAnimation } from "../animation/animation";
 import { environment } from "../../environments/environment";
 
 @Component({
