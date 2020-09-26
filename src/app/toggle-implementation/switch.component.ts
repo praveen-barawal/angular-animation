@@ -1,4 +1,4 @@
-import { Component, Input } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
 import { trigger, transition, animate, style } from "@angular/animations";
 import { AngularAnimation } from "../Animation/animation";
 import { environment } from "../../environments/environment";
@@ -8,7 +8,7 @@ import { environment } from "../../environments/environment";
   templateUrl: "./switch.component.html",
   animations: [AngularAnimation]
 })
-export class SwitchComponent {
+export class SwitchComponent implements OnInit {
   @Input() isChecked: boolean;
 
   showProgress: boolean = false;
@@ -19,9 +19,9 @@ export class SwitchComponent {
   spinnerClass: string = "mat-off-progress";
   isShowLoader: boolean = false;
 
-  constructor() {
-    this.isChecked=  environment.isToggleOn;
-    console.log(this.isChecked);
+  constructor() { }
+
+  ngOnInit() {
     this.setSwitchData();
   }
 
