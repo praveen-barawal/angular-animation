@@ -10,7 +10,6 @@ import { environment } from "../../environments/environment";
 })
 export class SwitchComponent {
   @Input() isChecked: boolean;
-  @Input() className: string;
 
   showProgress: boolean = false;
   showText: string = "Devices Off";

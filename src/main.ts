@@ -8,10 +8,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {DemoMaterialModule} from './app/material-module';
-
-import {ButtonOverviewExample} from './app/button-overview-example';
 import { ToggleDemoComponent } from './app/toggle-demo/toggle-demo-component';
-import { ToggleComponent } from './app/toggle/toggle.component';
 import { SwitchComponent } from './app/toggle-implementation/switch.component';
 
 @NgModule({
@@ -25,7 +22,7 @@ import { SwitchComponent } from './app/toggle-implementation/switch.component';
     ReactiveFormsModule,
   ],
   entryComponents: [ToggleDemoComponent],
-  declarations: [ ToggleComponent,SwitchComponent, ToggleDemoComponent],
+  declarations: [ SwitchComponent, ToggleDemoComponent],
   bootstrap: [ToggleDemoComponent],
   providers: []
 })
